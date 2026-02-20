@@ -6,7 +6,7 @@ export function Footer() {
           {/* Brand */}
           <a href="#" className="ml-2 flex items-center sm:ml-3">
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Valtrix Exchange"
               className="h-12 w-auto sm:h-14"
             />
