@@ -34,9 +34,9 @@ export function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Valtrix Exchange"
-            width={200}
-            height={80}
-            className="h-12 w-auto sm:h-14"
+            width={280}
+            height={100}
+            className="h-16 w-auto sm:h-20"
             priority
           />
         </a>

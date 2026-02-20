@@ -8,7 +8,7 @@ export function Footer() {
             <img
               src="/images/logo.png"
               alt="Valtrix Exchange"
-              className="h-12 w-auto sm:h-14"
+              className="h-16 w-auto sm:h-20"
             />
           </a>
 
