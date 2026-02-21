@@ -5,7 +5,7 @@ import { Shield, Lock, Clock, ScanSearch } from "lucide-react"
 const benefits = [
   {
     icon: Shield,
-    text: "Final rate depends on transaction size (1% \u2013 3.7%)",
+    text: "Spread 1\u20134.3% in favor of the client, depending on transaction amount",
   },
   {
     icon: Lock,

@@ -3,9 +3,9 @@ import { ShieldCheck, FileSearch, AlertTriangle } from "lucide-react"
 const complianceItems = [
   {
     icon: ShieldCheck,
-    title: "AML Wallet Checks",
+    title: "Wallet Check (AML)",
     description:
-      "We conduct AML wallet checks to ensure funds are compliant.",
+      "We conduct wallet screening to confirm the legitimacy of funds. The procedure may be completed online before the meeting or in person during the transaction.",
   },
   {
     icon: FileSearch,

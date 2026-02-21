@@ -32,11 +32,11 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="#" className="ml-2 flex items-center sm:ml-3">
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="Valtrix Exchange"
-            width={200}
-            height={80}
-            className="h-12 w-auto sm:h-14"
+            width={280}
+            height={100}
+            className="h-16 w-auto sm:h-20"
             priority
           />
         </a>
