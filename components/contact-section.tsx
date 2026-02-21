@@ -1,10 +1,49 @@
 "use client"
 
 import { useState } from "react"
-import { Mail, Send } from "lucide-react"
+import { Mail, Send, Loader2 } from "lucide-react"
 
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+    setError("")
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("contact") as string,
+      telegram: formData.get("contact") as string,
+      amount: formData.get("amount") as string,
+      direction: formData.get("type") as string,
+      location: formData.get("location") as string,
+      network: formData.get("network") as string,
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+
+      if (!res.ok) {
+        throw new Error("Failed to submit")
+      }
+
+      setSubmitted(true)
+    } catch {
+      setError("Something went wrong. Please try again or contact us directly.")
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <section id="contact" className="relative py-24 lg:py-32">
@@ -55,7 +94,7 @@ export function ContactSection() {
                   <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                     Telegram
                   </p>
-                  <p className="text-sm text-foreground">@ValtrixExchange</p>
+                  <p className="text-sm text-foreground">@ValtrixExchangeOfficial</p>
                 </div>
               </div>
             </div>
@@ -78,10 +117,7 @@ export function ContactSection() {
               </div>
             ) : (
               <form
-                onSubmit={(e) => {
-                  e.preventDefault()
-                  setSubmitted(true)
-                }}
+                onSubmit={handleSubmit}
                 className="flex flex-col gap-5"
               >
                 <div>
@@ -224,11 +260,25 @@ export function ContactSection() {
                   </label>
                 </div>
 
+                {error && (
+                  <p className="rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-2 text-center text-xs text-red-400">
+                    {error}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="mt-2 w-full rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(201,169,110,0.15)]"
+                  disabled={loading}
+                  className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(201,169,110,0.15)] disabled:opacity-60"
                 >
-                  Submit Request
+                  {loading ? (
+                    <>
+                      <Loader2 className="size-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Submit Request"
+                  )}
                 </button>
 
                 <p className="text-center text-xs text-muted-foreground">
