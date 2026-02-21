@@ -55,7 +55,7 @@ export function ContactSection() {
                   <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                     Telegram
                   </p>
-                  <p className="text-sm text-foreground">@ValtrixExchange</p>
+                  <p className="text-sm text-foreground">@ValtrixExchangeOfficial</p>
                 </div>
               </div>
             </div>
