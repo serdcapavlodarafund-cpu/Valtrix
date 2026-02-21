@@ -43,14 +43,14 @@ export function Footer() {
         {/* Policy links */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
           <a
-            href="#"
+            href="/privacy-policy"
             className="text-xs text-muted-foreground/60 transition-colors hover:text-primary"
           >
             Privacy Policy
           </a>
           <span className="text-muted-foreground/30">|</span>
           <a
-            href="#"
+            href="/terms-of-service"
             className="text-xs text-muted-foreground/60 transition-colors hover:text-primary"
           >
             Terms of Service

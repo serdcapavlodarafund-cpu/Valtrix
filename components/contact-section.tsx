@@ -190,6 +190,40 @@ export function ContactSection() {
                   />
                 </div>
 
+                <div className="flex items-start gap-3">
+                  <input
+                    id="agree"
+                    name="agree"
+                    type="checkbox"
+                    required
+                    className="mt-1 size-4 shrink-0 cursor-pointer accent-primary"
+                  />
+                  <label
+                    htmlFor="agree"
+                    className="text-xs leading-relaxed text-muted-foreground"
+                  >
+                    I agree to the{" "}
+                    <a
+                      href="/privacy-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline transition-colors hover:text-gold-light"
+                    >
+                      Privacy Policy
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="/terms-of-service"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline transition-colors hover:text-gold-light"
+                    >
+                      Terms of Service
+                    </a>
+                    .
+                  </label>
+                </div>
+
                 <button
                   type="submit"
                   className="mt-2 w-full rounded-xl bg-primary py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:bg-gold-light hover:shadow-[0_0_30px_rgba(201,169,110,0.15)]"
