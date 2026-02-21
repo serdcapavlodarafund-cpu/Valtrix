@@ -89,7 +89,7 @@ export function Hero() {
               </svg>
             </a>
             <a
-              href="https://t.me/"
+              href="https://t.me/ValtrixExchangeOfficial"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-8 py-3.5 text-sm font-medium text-secondary-foreground transition-all duration-300 hover:border-primary/30 hover:bg-secondary/80"
