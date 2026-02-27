@@ -42,8 +42,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${_inter.variable} ${_playfair.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${_inter.variable} ${_playfair.variable} overflow-x-hidden`}>
+      <body className="font-sans antialiased overflow-x-hidden">
         {children}
         <Analytics />
       </body>

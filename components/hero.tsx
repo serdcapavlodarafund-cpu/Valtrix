@@ -26,7 +26,7 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center overflow-hidden">
       {/* Background effects */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px]" />
+        <div className="absolute top-1/4 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-[120px] sm:h-[600px] sm:w-[600px]" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
       </div>
 

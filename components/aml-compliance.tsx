@@ -23,10 +23,10 @@ const complianceItems = [
 
 export function AmlCompliance() {
   return (
-    <section id="compliance" className="relative py-24 lg:py-32">
+    <section id="compliance" className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 border-b border-border" />
       {/* Subtle glow */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/3 blur-[150px]" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/3 blur-[150px] sm:h-[500px] sm:w-[500px]" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mb-16 text-center">
