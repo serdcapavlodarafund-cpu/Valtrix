@@ -46,9 +46,9 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32">
+    <section id="contact" className="relative overflow-hidden py-24 lg:py-32">
       <div className="absolute inset-0 border-b border-border" />
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/3 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[200px] w-[300px] -translate-x-1/2 rounded-full bg-primary/3 blur-[120px] sm:h-[400px] sm:w-[600px]" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
